@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-
 function App() {
   return (
     <div className="App">
@@ -9,15 +8,21 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ComponentName></ComponentName>
+        <p>Changed The Emmet Settings</p>
       </header>
+    </div>
+  );
+}
+
+function ComponentName() {
+  const ComponentStyle = {
+    border : '2px solid yellow'
+  }
+  return (
+    <div style={ComponentStyle}>
+      <p>Hi</p>
+      <p>Bye</p>
     </div>
   );
 }

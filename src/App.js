@@ -1,16 +1,26 @@
 import logo from './logo.svg';
+import React , {useState} from 'react';
 import './App.css';
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Counter></Counter>
         {productInfo.map(infoObj => <Product nameAndPriceObject ={infoObj} ></Product>)}
         <p>Changed The Emmet Settings</p>
       </header>
+    </div>
+  );
+}
+
+function Counter (){
+  const [count , setCount] = useState(0);
+  return(
+    <div>
+      <h4>Counter : {count}</h4>
+      <button onClick={() => setCount(count+1)}>Add</button>
+      <button onClick={() => setCount(count-1)}>Remove</button>
     </div>
   );
 }
